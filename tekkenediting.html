@@ -1,0 +1,310 @@
+<html lang="en"></html>
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Tekken 8
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1d23;
+            color: white;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1a1d23;
+        }
+        .navbar img {
+            height: 50px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .navbar .auth-buttons a {
+            border: 1px solid white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .navbar .auth-buttons a.sign-up {
+            background-color: white;
+            color: #1a1d23;
+        }
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 70px);
+            padding: 20px;
+        }
+        .main-content .left-section, .main-content .right-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-content .left-section {
+            flex-direction: column;
+            text-align: center;
+        }
+        .main-content .left-section img {
+            width: 300px;
+        }
+        .main-content .left-section .prizepool {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .main-content .left-section .amount {
+            font-size: 48px;
+            color: #ff0000;
+            margin: 10px 0;
+        }
+        .main-content .left-section .date {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-content .left-section .date i {
+            margin-right: 5px;
+        }
+        .main-content .right-section img {
+            width: 300px;
+            border-left: 2px solid #ff0000;
+        }
+        .right-section:hover{
+            transition: all 200ms ease-in;
+        }
+        .nav-links a:hover{
+            color: #ff0000;
+            transition: all 200ms ease-in;
+        }
+        .video-container {
+  width: 100%;
+  height: 500px;
+  margin: opx;
+  background-color: #333;
+  padding: 0%;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+  .para{
+    position: absolute;
+    top: 2000;
+    left: 10%;
+    color: #15bcd5;
+    border: #1a1d23;
+  }
+  .button-49,
+.button-49:after {
+  width: 90px;
+  height: 60px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: absolute;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  left: 10%;
+  top: 2000;
+}
+
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'ALTERNATE TEXT';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+  animation: 2s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+
+
+  </style>
+ </head>
+ <body>
+  <div class="navbar">
+   <img alt="" height="50" src="tekken8_logo.jpg.png" width="150"/>
+   <div class="nav-links">
+    <a href="conquerimhome.html">
+     HOME </a>
+     <a href="./tournaments.html">
+      TOURNAMENT
+  </a>
+   </div>
+   <div class="auth-buttons">
+    <li><a href="https://discord.gg/NMX3F56wUx">REGISTER</a></li> 
+   
+   </div>
+  </div>
+  <div class="video-container">
+    <video loop="" muted="" autoplay="" class="video_loop lozad" data-loaded="true">
+        <source data-src="https://static.bandainamcoent.eu/video/tekken8/TEKKEN_8_animated-header.webm" type="video/webm" src="https://static.bandainamcoent.eu/video/tekken8/TEKKEN_8_animated-header.webm">
+        <source data-src="https://static.bandainamcoent.eu/video/tekken8/TEKKEN_8_animated-header.mp4" type="video/mp4" src="https://static.bandainamcoent.eu/video/tekken8/TEKKEN_8_animated-header.mp4">
+    </video>
+    <div class="main-content">
+   <div class="left-section">
+    <img alt="tekken8_announcement_thumbnail.jpg" height="200" src="tekken8_announcement_thumbnail.jpg" width="300"/>
+    <div class="prizepool">
+     PRIZEPOOL
+    </div>
+    <div class="amount">
+     20000 INR
+    </div>
+    <div class="date">
+     <i class="fas fa-calendar-alt">
+     </i>
+     20
+     <sup>
+      TH
+     </sup>
+     DEC - 25
+     <sup>
+      TH
+     </sup>
+     DEC
+    </div>
+   </div>
+   <div class="right-section">
+    <img alt="Tekken 8 Jin Kazama Image" height="600" src="4e9c6011f398ba924e1c5b56c08a6f2f.jpg" width="150"/>
+   </div>
+  </div>
+  <div class="field-content">
+    <a href="#" class="teaser-video__link" id="js-teaser-video__link" title="Watch trailer in full screen">
+
+
+        
+<button class="button-49" role="button">JOIN NOW</button>
+
+    <video class="teaser-video__video" id="js-teaser-video__video" muted="" playsinline="" autoplay="" loop="" data-loaded="true">
+        <source data-src="https://static.bandainamcoent.eu/video/tekken8/TEKKEN8-trailer-autoplay.webm" type="video/webm" src="https://static.bandainamcoent.eu/video/tekken8/TEKKEN8-trailer-autoplay.webm">
+        <source data-src="https://static.bandainamcoent.eu/video/tekken8/TEKKEN8-trailer-autoplay.mp4" type="video/mp4" src="https://static.bandainamcoent.eu/video/tekken8/TEKKEN8-trailer-autoplay.mp4">
+    </video>
+    </a>
+
+<div><div class="field field--name-field-key-feature-video field--type-file field--label-hidden field--item key-feature-has-video" style="transform: none;"><video loop="" muted="" autoplay="" class="lozad" data-loaded="true"><source data-src="https://static.bandainamcoent.eu/video/tekken8/TEKKEN8-KF01.webm" type="video/webm" src="https://static.bandainamcoent.eu/video/tekken8/TEKKEN8-KF01.webm"><source data-src="https://static.bandainamcoent.eu/video/tekken8/TEKKEN8-KF01.mp4" type="video/mp4" src="https://static.bandainamcoent.eu/video/tekken8/TEKKEN8-KF01.mp4"></video></div></div>
+<div class="paragraph paragraph--type--title-key-feature-line paragraph--view-mode--default">      
+    <div class="field field--name-field-key-feature-video field--type-file field--label-hidden field--item key-feature-has-video" style="transform: none;"><video loop="" muted="" autoplay="" class="lozad" data-loaded="true"><source data-src="https://static.bandainamcoent.eu/video/tekken8-keyfeature-4.webm" type="video/webm" src="https://static.bandainamcoent.eu/video/tekken8-keyfeature-4.webm"><source data-src="https://static.bandainamcoent.eu/video/tekken8-keyfeature-4.mp4" type="video/mp4" src="https://static.bandainamcoent.eu/video/tekken8-keyfeature-4.mp4"></video></div>
+
+    <div class="field field--name-field-image field--type-image field--label-hidden field--item" style="display: none;">  <img src="https://p325k7wa.twic.pics/high/tekken/tekken-8/00-page-setup/tekken8-keyfeature-4.jpg?twic=v1/cover=1280/step=10/quality=80/output=preview" width="1280" height="720" alt="" loading="lazy" class="twic img-responsive" typeof="foaf:Image" data-twic-src="image:/high/tekken/tekken-8/00-page-setup/tekken8-keyfeature-4.jpg" data-twic-src-transform="cover/step=10/quality=80" style="object-fit: cover">
+
+</div>
+
+<div class="key-feature-description" style="transform: none;">
+
+    <h3 class="field field--name-field-catch-phrase field--type-string field--label-hidden field--item">Arcade Quest</h3>
+
+    <div class="field field--name-field-text field--type-text-long field--label-hidden field--item"><div style="color:white;">
+<p>In the <strong><span style="color:#dd1d5b;">new single-player mode ‘Arcade Quest’</span></strong>, players can <strong><span style="color:#dd1d5b;">create their own avatar and conquer their rivals</span></strong> in a variety of different arcades.</p>
+
+<p>&nbsp;</p>
+
+<p>This mode serves as an <strong><span style="color:#dd1d5b;">introduction to the gameplay of TEKKEN 8</span></strong>, allowing players to acquire basic knowledge, learn practical techniques, and enjoy a unique storyline and battles different from regular matches. As the protagonist grows and faces increasingly stronger opponents, so do you!</p>
+
+<p>&nbsp;</p>
+
+<p>Unlock customization items for both playable characters and avatars while progressing through the story.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+<div>
+    <button class="button"> COMMUNITY</button>
+</div>
+</body>
+</html>

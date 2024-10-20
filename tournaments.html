@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="icon" href="conquerimlogo.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="nav">
+                    <div class="home">
+                        <li><a href="conquerimhome.html">HOME</a></li>
+                    </div>
+                    <div class="middle">
+                        <li><a href="./tournaments.html">TOURNAMENTS</a></li>
+                    </div>
+                    <div class="user">
+                        <li><a href="https://discord.gg/NMX3F56wUx">REGISTER</a></li> 
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <h2 class="head">THESE ARE THE ONGOING/UPCOMING TOURNAMENTS!</h2>
+    <div class="select">
+        <h2>Select</h2>
+        <label for="games">Choose a game:</label>
+        <select id="gameList" name="games" onchange="filterCompetitions()">
+            <option value="">-- Select a Game --</option>
+            <option value="valorant">Valorant</option>
+            <option value="pubg">PUBG</option>
+            <option value="tekken8">Tekken 8</option>
+        </select>
+        <div id="gameDetails">
+        </div>
+        <div class="container">
+            <div class="item" data-game="pubg">
+                <img src="bgmi coming soon.png" alt="" class="image">
+                <p>COMING SOON (PUBG)</p>
+                <a href="#">
+                    <button class="apply"> APPLY HERE</button>
+                </a>
+            </div>
+            <div class="item" id="gamelist" data-game="valorant">
+                <img src="VALORANTcomingsoon.png" alt="" class="image">
+                <p>COMING SOON (VALORANT)</p>
+                <a href="#">
+                    <button class="apply">APPLY HERE</button>
+                </a>
+            </div>
+            <div class="item" id="gamelist" data-game="tekken8">
+                <img src="JINKAZAMA.jpg" alt="" class="image">
+                <p>COMING SOON (TEKKEN 8)</p>
+                <a href="#">
+                    <button class="apply">APPLY HERE</button>
+                </a>
+            </div>
+            <div class="item" id="gamelist" data-game="pubg">
+                <img src="BGMICOMINGSOON.png" alt="" class="image">
+                <p>COMING SOON (PUBG)</p>
+                <a href="#">
+                    <button class="apply">APPLY HERE</button>
+                </a>
+            </div>
+        </div>
+        <script>
+            function filterCompetitions() {
+                // Get the selected game value from the dropdown
+                var selectedGame = document.getElementById("gameList").value;
+
+                // Get all competition items
+                var competitionItems = document.querySelectorAll('.item');
+
+                // Loop through each competition item and hide/show based on the selected game
+                competitionItems.forEach(function (item) {
+                    if (selectedGame === "" || item.getAttribute("data-game") === selectedGame) {
+                        // Show the item if it matches the selected game or no game is selected
+                        item.style.display = "block";
+                    } else {
+                        // Hide the item if it doesn't match the selected game
+                        item.style.display = "none";
+                    }
+                });
+            }
+
+            // Initialize by showing all items (when no game is selected)
+            filterCompetitions();
+        </script>
+</body>
+
+</html>
